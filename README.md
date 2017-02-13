@@ -1,17 +1,21 @@
-[Laravel](index.html)
+[Laravel](./index.html)
 ===============
 
-- [vyvojove prostredie](prostredie.html#vyvojove-prostredie)
-	+ [composer](prostredie.html#composer)
-	+ [VirtualBox](prostredie.html#virtualbox)
-	+ [Vagrant](prostredie.html#vagrant)
-	+ [homestead](prostredie.html#homestead)
-- [inicializacia a konfiguracia](inicializacia.html#inicializacia-laravelu-a-konfiguracia-prostredia)
-	+ [cez composer](inicializacia.html#cez-composer)
-	+ [struktura projektu](inicializacia.html#struktura-projektu)
-	+ [interakcia s projektom](inicializacia.html#interakcia-s-laravelom)
-- [Laravel komponenty](komponenty.html)
-	+ 
+- [vyvojove prostredie](./prostredie.html#vyvojove-prostredie)
+	+ [composer](./prostredie.html#composer)
+	+ [VirtualBox](./prostredie.html#virtualbox)
+	+ [Vagrant](./prostredie.html#vagrant)
+	+ [homestead](./prostredie.html#homestead)
+- [inicializacia a konfiguracia](./inicializacia.html#inicializacia-laravelu-a-konfiguracia-prostredia)
+	+ [cez composer](./inicializacia.html#cez-composer)
+	+ [struktura projektu](./inicializacia.html#struktura-projektu)
+	+ [interakcia s projektom](./inicializacia.html#interakcia-s-laravelom)
+- [Laravel komponenty](./komponenty.html)
+	+ [route](./komponenty.html#route)
+	+ [controller](./komponenty.html#controller)
+	+ [model](./komponenty.html#model)
+	+ [eloquent](./komponenty.html#eloquent)
+- [Laravel CRUD example](./crud.html)
 
 - - - -
 

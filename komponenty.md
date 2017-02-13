@@ -6,3 +6,15 @@
 - - - -
 
 ## Komponety
+
+### route
+
+### controller
+
+### model
+
+### eloquent
+
+- - - -
+
+[dalej](./crud.html)
