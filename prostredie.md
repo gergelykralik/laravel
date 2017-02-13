@@ -163,4 +163,4 @@ Uzivatel je `vagrant`, `sudo` funguje bez hesla.
 
 - - - -
 
-[dalej](./inicializacia.html)
+[Inicializacia a konfiguracia >](./inicializacia.html)
