@@ -1,4 +1,4 @@
-[Laravel](index.html)
+[Laravel](./index.html)
 =====================
 
 ## Vyvojove prostredie
@@ -163,4 +163,4 @@ Uzivatel je `vagrant`, `sudo` funguje bez hesla.
 
 - - - -
 
-[dalej](inicializacia.html)
+[dalej](./inicializacia.html)

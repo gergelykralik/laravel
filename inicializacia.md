@@ -1,7 +1,7 @@
-[Laravel](index.html)
+[Laravel](./index.html)
 =====================
 
-[spat](prostredie.html)
+[spat](./prostredie.html)
 
 - - - -
 
@@ -77,4 +77,4 @@ php artisan route:list                	# List all registered routes
 
 - - - -
 
-[dalej](komponenty.html)
+[dalej](./komponenty.html)

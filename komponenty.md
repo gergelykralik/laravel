@@ -1,7 +1,7 @@
-[Laravel](index.html)
+[Laravel](./index.html)
 =====================
 
-[spat](inicializacia.html)
+[spat](./inicializacia.html)
 
 - - - -
 
