@@ -20,10 +20,12 @@
 
 - - - -
 
-*Aktualna verzia [Laravelu: 5.4](https://laravel.com/docs/5.4)*
+*Aktualna verzia: [Laravel 5.4](https://laravel.com/docs/5.4)*
 
 - - - -
 
 @author Gergely Kralik
 
 @version v0.5
+
+- - - -
