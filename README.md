@@ -1,5 +1,5 @@
-[Laravel](./index.html)
-=======================
+[Laravel DOCS](./index.html)
+============================
 
 - [Vyvojove prostredie](./prostredie.html#vyvojove-prostredie)
 	+ [composer](./prostredie.html#composer)
@@ -24,7 +24,7 @@
 
 - - - -
 
-@author [Gergely Králik](https://github.com/gergelykralik) <gergely@kralik.io>
+@author [Gergely Králik](https://github.com/gergelykralik)
 
 @version v0.6
 

@@ -17,25 +17,25 @@ Obsahuje vsetky dolezite informacie o projekte, a balicky ktore su potrebne pre 
 
 *instalacia balicka (vytvorenie noveho projektu)*
 
-```
+```bash
 composer create-project laravel/framework my-app
 ```	
 
 *instalacia balikov z composer.json*
 
-```
+```bash
 composer update
 ```
 
 *pridavanie balicka*
 
-```
+```bash
 composer require "laravelcollective/html"
 ```
 
 *pregenerovanie autoloadera*
 
-```
+```bash
 composer dump-autoload --optimize
 ```
 
@@ -43,7 +43,7 @@ composer dump-autoload --optimize
 
 Autoload je vopred nastavena, je v nom zadefinovane v ktorom adresari je dany namespace
 
-```
+```json
 "autoload": {
 	\\ ... konfig
 }
@@ -72,7 +72,7 @@ Homestead je Vagrant box, v ktorom je vsetko nakonfigurovany na vyvoj Laravel ap
 
 #### Instalacia
 
-```
+```bash
 mkdir ~/homestead-vm
 cd ~/homestead-vm
 vagrant box add laravel/homestead
@@ -80,7 +80,7 @@ vagrant box add laravel/homestead
 
 **Hlavny konfiguracny subor:**
 
-```
+```bash
 ~/.homestead/Homestead.yaml
 ```
 

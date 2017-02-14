@@ -53,7 +53,7 @@ artisan						#
 
 ### Interakcia s Laravelom (Artisan)
 
-```
+```bash
 cd /path/to/projekt
 php artisan list 				# zoznam prikazov
 php artisan down 				# maintenance mode

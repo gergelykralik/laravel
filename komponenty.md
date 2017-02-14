@@ -37,13 +37,13 @@ Klasicke requesty (`GET`/`POST`) su bezproblemove, avsak `PUT`, `PATCH` a `DELET
 
 Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou, alebo pouzivat zabudovany helper na to:
 
-```
+```php
 {{ method_field('PUT') }}
 ``` 
 
 *Aktualne cesty v aplikacii vieme ziskat pomocou prikazu*
 
-```
+```bash
 php artisan route:list
 ```
 
@@ -113,7 +113,7 @@ class SampleController extends Controller
 
 *Generator:*
 
-```
+```bash
 php artisan make:controller SampleController
 ```
 
@@ -156,7 +156,7 @@ class Sample extends Model
 
 *Generator:*
 
-```
+```bash
 php artisan make:model Sample
 ```
 
@@ -181,7 +181,7 @@ return $sample->parent;
 
 ### Migracie
 
-```
+```bash
 php artisan make:migration create_samples_table
 ```
 
@@ -214,7 +214,7 @@ class CreateSamplesTable extends Migration
 
 **Zapis migracii do DB**
 
-```
+```bash
 php artisan migrate
 ```
 
