@@ -1,5 +1,5 @@
 [Laravel](./index.html)
-=====================
+=======================
 
 ## Vyvojove prostredie
 
@@ -22,19 +22,23 @@ composer create-project laravel/framework my-app
 ```	
 
 *instalacia balikov z composer.json*
+
 ```
 composer update
 ```
 
 *pridavanie balicka*
+
 ```
 composer require "laravelcollective/html"
 ```
 
 *pregenerovanie autoloadera*
+
 ```
 composer dump-autoload --optimize
 ```
+
 ##### Autoload
 
 Autoload je vopred nastavena, je v nom zadefinovane v ktorom adresari je dany namespace
@@ -53,6 +57,7 @@ Nastroj na manazovanie virtualnych strojov. [download](https://www.virtualbox.or
 ### [Vagrant](https://www.vagrantup.com)
 
 Nastroj na jednoduchu spravu vyrtualnych strojov. [download](https://www.vagrantup.com/downloads.html)
+
 Cez vagrant je mozne kompletne nakonfigurovat virtual, aj modifikovat konfiguraciu pomocou konfig suboru.
 
 #### Konfiguracia
@@ -82,6 +87,7 @@ vagrant box add laravel/homestead
 ##### Konfiguracia
 
 Vseobecne nastavenia:
+
 ```yaml
 ip: "192.168.10.10"
 memory: 2048
@@ -90,6 +96,7 @@ provider: virtualbox
 ```
 
 Mapovanie adresarov:
+
 ```yaml
 folders:
 	- map: ~/workspace
@@ -97,6 +104,7 @@ folders:
 ```
 
 Mapovanie webov:
+
 ```yaml
 sites:
     - map: homestead.app
@@ -104,6 +112,7 @@ sites:
 	- map: laraveladmin.app
 	  to: /home/vagrant/workspace/admin-app-laravel/public
 ```
+
 **Aby vytvoreny web fungoval treba uviest IP adresu a domenu v `/etc/hosts`**
 
 ```bash

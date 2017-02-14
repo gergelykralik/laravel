@@ -1,5 +1,5 @@
 [Laravel](./index.html)
-===============
+=======================
 
 - [Vyvojove prostredie](./prostredie.html#vyvojove-prostredie)
 	+ [composer](./prostredie.html#composer)
@@ -24,8 +24,8 @@
 
 - - - -
 
-@author Gergely Kralik
+@author [Gergely Králik](https://github.com/gergelykralik) <gergely@kralik.io>
 
-@version v0.5
+@version v0.6
 
 - - - -

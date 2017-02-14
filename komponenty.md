@@ -1,5 +1,5 @@
 [Laravel](./index.html)
-=====================
+=======================
 
 [< Inicializacia a konfiguracia](./inicializacia.html)
 
@@ -25,6 +25,7 @@ Route::get('/', function () {
 ```
 
 Request type:
+
 - get
 - post
 - put
@@ -32,13 +33,37 @@ Request type:
 - delete
 - resource
 
+Klasicke requesty (`GET`/`POST`) su bezproblemove, avsak `PUT`, `PATCH` a `DELETE` nemaju reprezentaciu v html. 
+
+Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou, alebo pouzivat zabudovany helper na to:
+
+```
+{{ method_field('PUT') }}
+``` 
+
 *Aktualne cesty v aplikacii vieme ziskat pomocou prikazu*
+
 ```
 php artisan route:list
 ```
 
 **resource**: toto pouzivame v CRUD routingu, nakolko typ `resource` obsahuje zvysne typy
 
+Priklad:
+
+```
+controller: SampleController
+
+resource route obsahuje:
+
+GET     /sample 
+GET     /sample/create
+POST    /sample
+GET     /sample/{id}
+PUT     /sample/{id}
+GET     /sample/{id}/edit
+DELETE  /sample/{id}
+```
 
 ### controller
 
@@ -87,6 +112,7 @@ class SampleController extends Controller
 ```
 
 *Generator:*
+
 ```
 php artisan make:controller SampleController
 ```
@@ -96,6 +122,7 @@ php artisan make:controller SampleController
 Umiestnenie: `project-root/app/`
 
 #### Syntax
+
 ```php
 class Sample extends Model
 {
@@ -119,13 +146,16 @@ class Sample extends Model
     }
 }
 ```
+
 ##### Eloquent relationships:
+
 - belongsTo 			parent
 - belongsToMany 		n ** n
 - hasOne 				1 ** 1
 - hasMany				1 ** n
 
 *Generator:*
+
 ```
 php artisan make:model Sample
 ```
@@ -137,9 +167,11 @@ Databazova vrstva, mapuje DB na objekty.
 #### Syntax
 
 Request vrati `Eloquent kolekciu`.
+
 Kazdy objekt ma svoje properties, na zaklade vztahov.
 
 Napr. poznam id `Sample`, potrebujem najst `Parent`-a
+
 ```php
 // 
 $sample = Sample::find(1);
@@ -181,6 +213,7 @@ class CreateSamplesTable extends Migration
 ```
 
 **Zapis migracii do DB**
+
 ```
 php artisan migrate
 ```

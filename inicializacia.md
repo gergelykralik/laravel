@@ -1,5 +1,5 @@
 [Laravel](./index.html)
-=====================
+=======================
 
 [< Vyvojove prostredie](./prostredie.html)
 
@@ -7,7 +7,7 @@
 
 ## Inicializacia Laravelu a konfiguracia prostredia
 
-**prikazy spustime na stroji `homestead`**
+**prikazy spustime na Vagrant VM `homestead`**
 
 ```bash
 homestead up
@@ -30,7 +30,7 @@ composer global require "phpmd/phpmd"
 laravel new nazov-projektu
 ```
 
-**Takto ziskavame nakonfigurovany Laravel projekt**
+**Takto vytvoreny projekt je vopred nakonfigurovana.**
 
 ### Struktura projektu
 
@@ -55,24 +55,24 @@ artisan						#
 
 ```
 cd /path/to/projekt
-php artisan list 						# zoznam prikazov
-php artisan down 						# maintenance mode
-php artisan up  						# prevadzka
-php artisan optimize					# optimalizacia generovaneho kodu
+php artisan list 				# zoznam prikazov
+php artisan down 				# maintenance mode
+php artisan up  				# prevadzka
+php artisan optimize			# optimalizacia generovaneho kodu
 
 ## Generatory ##
-php artisan make:auth                 	# Scaffold basic login and registration views and routes
-php artisan make:controller           	# Create a new controller class
-php artisan make:migration            	# Create a new migration file
-php artisan make:model                	# Create a new Eloquent model class
-php artisan make:policy               	# Create a new policy class
-php artisan make:provider             	# Create a new service provider class
-php artisan make:request              	# Create a new form request class
+php artisan make:auth 			# Scaffold basic login and registration views and routes
+php artisan make:controller     # Create a new controller class
+php artisan make:migration      # Create a new migration file
+php artisan make:model          # Create a new Eloquent model class
+php artisan make:policy         # Create a new policy class
+php artisan make:provider       # Create a new service provider class
+php artisan make:request        # Create a new form request class
         
 ## Router ##
-php artisan route:cache               	# Create a route cache file for faster route registration
-php artisan route:clear               	# Remove the route cache file
-php artisan route:list                	# List all registered routes
+php artisan route:cache         # Create a route cache file for faster route registration
+php artisan route:clear         # Remove the route cache file
+php artisan route:list          # List all registered routes
 ```
 
 - - - -
