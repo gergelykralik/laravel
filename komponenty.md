@@ -38,7 +38,7 @@ Klasicke requesty (`GET`/`POST`) su bezproblemove, avsak `PUT`, `PATCH` a `DELET
 Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou, alebo pouzivat zabudovany helper na to:
 
 ```
-{{ method_field('PUT') }}
+\{{ method_field('PUT') }}
 ``` 
 
 *Aktualne cesty v aplikacii vieme ziskat pomocou prikazu*
