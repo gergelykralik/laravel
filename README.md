@@ -26,6 +26,6 @@
 
 @author [Gergely Králik](https://github.com/gergelykralik)
 
-@version v0.6
+@version v0.9
 
 - - - -
