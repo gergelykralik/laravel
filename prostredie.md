@@ -18,7 +18,12 @@ Obsahuje vsetky dolezite informacie o projekte, a balicky ktore su potrebne pre 
 *instalacia balicka (vytvorenie noveho projektu)*
 
 ```bash
-composer create-project laravel/framework my-app
+# Prvy projekt (globalna instalacia kniznice)
+composer global require "laravel/installer"
+
+# Projekt
+cd /www
+laravel new my-app
 ```	
 
 *instalacia balikov z composer.json*
@@ -70,18 +75,23 @@ Vagrant box bude inicializovany v aktualnom adresari.
 
 Homestead je Vagrant box, v ktorom je vsetko nakonfigurovany na vyvoj Laravel aplikacii.
 
-#### Instalacia
+#### Instalacia + inicializacia
 
 ```bash
 mkdir ~/homestead-vm
 cd ~/homestead-vm
 vagrant box add laravel/homestead
+
+cd ~
+git clone https://github.com/laravel/homestead.git homestead-vm
+cd ~/homestead-vm
+bash init.sh
 ```
 
 **Hlavny konfiguracny subor:**
 
 ```bash
-~/.homestead/Homestead.yaml
+~/homestead-vm/Homestead.yaml
 ```
 
 ##### Konfiguracia
@@ -99,18 +109,18 @@ Mapovanie adresarov:
 
 ```yaml
 folders:
-	- map: ~/workspace
-      to: /home/vagrant/workspace
+	- map: ~/Code
+      to: /www
 ```
 
 Mapovanie webov:
 
 ```yaml
 sites:
-    - map: homestead.app
-      to: /home/vagrant/workspace/
-	- map: laraveladmin.app
-	  to: /home/vagrant/workspace/admin-app-laravel/public
+    - map: php-myadmin
+      to: /www/php-myadmin/
+	- map: laravel.admin
+	  to: /www/admin-app-laravel-admin/public
 ```
 
 **Aby vytvoreny web fungoval treba uviest IP adresu a domenu v `/etc/hosts`**
@@ -120,8 +130,8 @@ sudo vim /etc/hosts
 ```
 
 ```bash
-192.168.10.10		homestead.app
-192.168.10.10		laraveladmin.app
+192.168.10.10		php-myadmin
+192.168.10.10		laravel.admin
 ```
 
 #### Dolezite prikazy
@@ -129,7 +139,7 @@ sudo vim /etc/hosts
 Vagrant prikazy funguju iba v adresari, v ktorom je vagrant box nainstalovany, ale vieme to rozsirit, pomocou `alias`ov.
 
 ```bash
-vim ~/.basrc
+vim ~/.bash_profile
 ```
 
 Pridavame alias pre `homestead`
@@ -139,16 +149,16 @@ Pridavame alias pre `homestead`
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
  
 # Homestead
-export PATH=/home/-user-/vagrant-vm/homestead:${PATH}
+export PATH=/Users/-user-/homestead-vm:${PATH}
 function homestead() {
-	(cd /home/-user-/vagrant-vm/homestead && vagrant $* )
+	(cd /Users/-user-/homestead-vm && vagrant $* )
 }
 ```
 
 Po ulozeni:
 
 ```bash
-source ~/.basrc
+source ~/.basrh_profile
 ```
 
 ##### Samotne prikazy
