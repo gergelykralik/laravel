@@ -20,7 +20,7 @@ Route::~requesttype~('~route~', '~resource~');
 
 // Jednoduchy priklad
 Route::get('/', function () {
-	return view('welcome');
+    return view('welcome');
 });
 ```
 
@@ -35,9 +35,7 @@ Request type:
 
 Klasicke requesty (`GET`/`POST`) su bezproblemove, avsak `PUT`, `PATCH` a `DELETE` nemaju reprezentaciu v html. 
 
-Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou, alebo pouzivat zabudovany helper na to:
-
-{{ `method_field('PUT')` }} 
+Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou.
 
 *Aktualne cesty v aplikacii vieme ziskat pomocou prikazu*
 
@@ -81,40 +79,40 @@ Umiestnenie: `project-root/app/Http/Controllers/`
 ```php
 class SampleController extends Controller
 {
-	public function index()
+    public function index()
     {
-    	// listing, route: /sample
-	}
+        // listing, route: /sample
+    }
 
-	public function create()
+    public function create()
     {
-    	// formular - vlozenie, route: /sample/create
-	}
+        // formular - vlozenie, route: /sample/create
+    }
 
-	public function store(Request $request)
+    public function store(Request $request)
     {
-    	// ukladanie do DB, route: /sample
-	}
+        // ukladanie do DB, route: /sample
+    }
 
-	public function show($id)
+    public function show($id)
     {
-    	// detail, route: /sample/{$id}
-	}
+        // detail, route: /sample/{$id}
+    }
 
-	public function edit($id)
+    public function edit($id)
     {
-    	// formular na editaciu, route: /sample/{$id}/edit
-	}
+        // formular na editaciu, route: /sample/{$id}/edit
+    }
 
-	public function update($id, Request $request)
+    public function update($id, Request $request)
     {
-    	// ukladanie do DB po editacii, route: /sample/{$id}
-	}
+        // ukladanie do DB po editacii, route: /sample/{$id}
+    }
 
-	public function show($id)
+    public function show($id)
     {
-    	// mazanie, route: /sample/{$id}
-	}
+        // mazanie, route: /sample/{$id}
+    }
 }
 ```
 
@@ -133,33 +131,33 @@ Umiestnenie: `project-root/app/`
 ```php
 class Sample extends Model
 {
-	protected $table = 'samples'; 			// nazov v DB 
-    public $timestamps = true; 				// automaticke pridavanie timestamps
+    protected $table = 'samples';            // nazov v DB 
+    public $timestamps = true;               // automaticke pridavanie timestamps
 
-    protected $dates = ['deleted_at'];		// tzv. soft delete (nezmazeme, iba deaktivujeme)
-    protected $fillable = [					// polia, ktore mozno naplnit datami od uzivatela
+    protected $dates = ['deleted_at'];       // tzv. soft delete (nezmazeme, iba deaktivujeme)
+    protected $fillable = [                  // polia, ktore mozno naplnit datami od uzivatela
         'parent_id', 'name', 'description'
     ];
-    protected $visible = [					// polia, ktore su zahrnute do selectov
+    protected $visible = [                   // polia, ktore su zahrnute do selectov
         'parent_id', 'name', 'description'
     ];
 
-    public function parent() { 				// tzv. Relationships v Eloquent. 
-    	return $this->belongsTo(Parent::class);		// Zadefinujeme vztah medzi modelmi
+    public function parent() {                  // tzv. Relationships v Eloquent. 
+        return $this->belongsTo(Parent::class); // Zadefinujeme vztah medzi modelmi
     }
 
     public function child() {
-    	return $this->hasMany(Child::class);		// 1 ** n
+        return $this->hasMany(Child::class);     // 1 ** n
     }
 }
 ```
 
 ##### Eloquent relationships:
 
-- belongsTo 			parent
-- belongsToMany 		n ** n
-- hasOne 				1 ** 1
-- hasMany				1 ** n
+- belongsTo             parent
+- belongsToMany         n ** n
+- hasOne                1 ** 1
+- hasMany               1 ** n
 
 *Generator:*
 

@@ -34,7 +34,7 @@ laravel new nazov-projektu
 
 ### Struktura projektu
 
-```
+```bash
 app/Http/Controllers/    # Kontroller
 app/Http/Requests/       # Vsetky requesty su presmerovane cez tieto triedy (je mozne pridat kontroly, etc.)
 app/Providers            # Service Providers - magic, cez tieto su globalne dostupne funkcie (napr. session)
@@ -54,7 +54,7 @@ artisan                  #
 ### Interakcia s Laravelom (Artisan)
 
 ```bash
-cd /path/to/projekt
+cd /www/laravel-admin
 artisan list             # zoznam prikazov
 artisan down             # maintenance mode
 artisan up               # prevadzka
