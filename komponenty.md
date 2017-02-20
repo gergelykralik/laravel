@@ -35,7 +35,9 @@ Request type:
 
 Klasicke requesty (`GET`/`POST`) su bezproblemove, avsak `PUT`, `PATCH` a `DELETE` nemaju reprezentaciu v html. 
 
-Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou.
+Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou, alebo pomocou helper funkcie:
+
+&#123;&#123; csrf_field() &#125;&#125;
 
 *Aktualne cesty v aplikacii vieme ziskat pomocou prikazu*
 

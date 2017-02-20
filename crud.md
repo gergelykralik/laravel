@@ -75,9 +75,11 @@ Odosielanie Formulara
 
 view
 
+
+`<form action="`&#123;&#123; `url('/page')` &#125;&#125;`" method="post">`
+
+&#123;&#123; `csrf_field()` &#125;&#125; &#123;&#123;`-- Takto pridavame hidden input pre CSRF token --`&#125;&#125;
 ```blade
-<form action="{{ url('/page') }}" method="post">
-    {{ csrf_field() }} {{-- Takto pridavame hidden input pre CSRF token --}}
     <input type="text" name="name">
     <input type="email" name="email">
     <button type="submit">Submit</button>
