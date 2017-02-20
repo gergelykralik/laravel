@@ -37,7 +37,7 @@ Klasicke requesty (`GET`/`POST`) su bezproblemove, avsak `PUT`, `PATCH` a `DELET
 
 Treba pridat do formulara hidden input s nazvom `_method` s prislusnou hodnotou, alebo pouzivat zabudovany helper na to:
 
-```php
+```
 {{ method_field('PUT') }}
 ``` 
 
@@ -54,6 +54,15 @@ Priklad:
 ```
 controller: SampleController
 
+# Vytvorime prikazom
+artisan make:controller --resource SampleController
+
+# Route zaregistrujeme v routes/web.php
+
+Route::resource('/sample', 'SampleController');
+```
+
+```php
 resource route obsahuje:
 
 GET     /sample 

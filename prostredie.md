@@ -50,7 +50,7 @@ Autoload je vopred nastavena, je v nom zadefinovane v ktorom adresari je dany na
 
 ```json
 "autoload": {
-	\\ ... konfig
+    \\ ... konfig
 }
 ```
 
@@ -109,7 +109,7 @@ Mapovanie adresarov:
 
 ```yaml
 folders:
-	- map: ~/Code
+    - map: ~/Code
       to: /www
 ```
 
@@ -119,8 +119,8 @@ Mapovanie webov:
 sites:
     - map: php-myadmin
       to: /www/php-myadmin/
-	- map: laravel.admin
-	  to: /www/admin-app-laravel-admin/public
+    - map: laravel.admin
+      to: /www/admin-app-laravel-admin/public
 ```
 
 **Aby vytvoreny web fungoval treba uviest IP adresu a domenu v `/etc/hosts`**
@@ -130,8 +130,8 @@ sudo vim /etc/hosts
 ```
 
 ```bash
-192.168.10.10		php-myadmin
-192.168.10.10		laravel.admin
+192.168.10.10      php-myadmin
+192.168.10.10      laravel.admin
 ```
 
 #### Dolezite prikazy
@@ -151,7 +151,7 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 # Homestead
 export PATH=/Users/-user-/homestead-vm:${PATH}
 function homestead() {
-	(cd /Users/-user-/homestead-vm && vagrant $* )
+    (cd /Users/-user-/homestead-vm && vagrant $* )
 }
 ```
 
@@ -164,12 +164,12 @@ source ~/.basrh_profile
 ##### Samotne prikazy
 
 ```bash
-homestead up 			# spustenie
-homestead suspend		# pozastavenie (graceful)
-homestead halt			# pozastavenie
-homestead status 		# stav
-homestead reload		# restart
-homestead provision		# reinicializacia (potrebne po pridavani novych webov)
+homestead up            # spustenie
+homestead suspend       # pozastavenie (graceful)
+homestead halt          # pozastavenie
+homestead status        # stav
+homestead reload        # restart
+homestead provision     # reinicializacia (potrebne po pridavani novych webov)
 
 # Po pridavani webov, alebo adresarov:
 homestead reload --provision
